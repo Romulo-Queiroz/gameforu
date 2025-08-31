@@ -57,7 +57,7 @@ export function RecommendedGames() {
       <div className="container mx-auto px-6 pt-20 pb-24">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-            🔍 Search your game
+            🔍 Encontre seu jogo
           </h2>
           <div className="flex justify-center">
             <p className="text-gray-300 text-lg max-w-2xl leading-relaxed text-center">
