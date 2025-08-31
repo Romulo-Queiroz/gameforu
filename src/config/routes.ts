@@ -21,16 +21,16 @@ export interface RouteGroup {
 export const MAIN_ROUTES: RouteConfig[] = [
   {
     path: "/",
-    label: "Início",
+    label: "start",
     icon: "🏠",
     description: "Página inicial da aplicação",
     isVisible: true,
   },
   {
     path: "/recommended-games",
-    label: "Recommended Games",
-    icon: "🎮",
-    description: "Jogos recomendados para você",
+    label: "Search your game",
+    icon: "🔍",
+    description: "Busque e encontre jogos para você",
     isVisible: true,
   },
 ];

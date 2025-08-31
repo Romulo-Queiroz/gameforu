@@ -22,21 +22,25 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => handleRouteClick("/")}
-              className="text-xl font-bold hover:text-gray-300 transition-colors duration-200"
+              className="hover:opacity-80 transition-opacity duration-200"
             >
-              GameForU
+              <img 
+                src="/logo.jpg" 
+                alt="GameForU" 
+                className="h-8 w-auto"
+              />
             </button>
           </div>
 
           {/* Links desktop */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-8">
             {visibleRoutes.map((route) => (
               <button
                 key={route.path}
                 onClick={() => handleRouteClick(route.path)}
                 className={`flex items-center space-x-2 hover:text-gray-300 transition-colors duration-200 ${
                   isActiveRoute(route.path) 
-                    ? 'text-blue-400 border-b-2 border-blue-400' 
+                    ? 'text-blue-400' 
                     : ''
                 }`}
                 title={route.description}
