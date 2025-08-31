@@ -56,7 +56,7 @@ export function RecommendedGames() {
     <section className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
       <div className="container mx-auto px-6 pt-20 pb-24">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
             🔍 Search your game
           </h2>
           <div className="flex justify-center">
@@ -133,10 +133,10 @@ export function RecommendedGames() {
         </div>
 
         {/* Informação sobre a API */}
-        <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-100 px-6 py-4 rounded-xl mb-12 backdrop-blur-sm animate-fade-in-up animate-float" style={{ animationDelay: '1.2s', animationFillMode: 'both' }}>
+        <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-100 px-6 py-4 rounded-xl mb-12 backdrop-blur-sm">
           <div className="flex items-center justify-center space-x-2 mb-2">
-            <span className="text-2xl animate-pulse">🎮</span>
-            <p className="font-semibold text-lg">Jogos Reais da API</p>
+            <span className="text-2xl">🎮</span>
+            <p className="font-semibold text-lg">Os 3 melhores</p>
           </div>
           <p className="text-center text-sm opacity-90 leading-relaxed">
             Exibindo os 3 jogos mais populares da categoria selecionada, com dados e imagens reais do FreeToGame.
