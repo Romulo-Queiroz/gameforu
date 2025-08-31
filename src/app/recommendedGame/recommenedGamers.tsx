@@ -122,10 +122,10 @@ export function RecommendedGames() {
         </div>
       </div>
 
-      {/* Informação sobre dados mockados */}
-      <div className="bg-blue-900/30 border border-blue-500 text-blue-200 px-4 py-3 rounded mb-4">
-        <p className="font-semibold">ℹ️ Modo Demonstração</p>
-        <p className="text-sm">Estamos exibindo jogos populares usando dados de demonstração. Os jogos mostrados são exemplos reais de títulos populares.</p>
+      {/* Informação sobre a API */}
+      <div className="bg-green-900/30 border border-green-500 text-green-200 px-4 py-3 rounded mb-4">
+        <p className="font-semibold">🎮 Jogos Reais da API</p>
+        <p className="text-sm">Exibindo os 3 jogos mais populares da categoria selecionada, com dados e imagens reais do FreeToGame.</p>
       </div>
 
       {error && (
@@ -148,7 +148,7 @@ export function RecommendedGames() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {games.slice(0, 9).map((game) => (
+          {games.map((game) => (
             <div
               key={game.id}
               className="bg-gray-900/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"

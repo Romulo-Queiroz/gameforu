@@ -2,23 +2,11 @@ import { Game, GameFilters } from './types';
 import { getMockGamesByFilters, mockGames } from '../data/mockGames';
 
 class GameService {
-  private baseUrl = 'https://www.freetogame.com/api';
-  private useMockData = true; // Flag para alternar entre API real e dados mockados
+  private baseUrl = '/api/games'; // Usar nossa API route local
+  private useMockData = false; // Mudado para false para usar API real
 
   async getGames(filters: GameFilters = {}): Promise<Game[]> {
-    // Se estiver usando dados mockados, retornar dados locais
-    if (this.useMockData) {
-      console.log('🎮 Usando dados mockados para jogos populares');
-      return new Promise((resolve) => {
-        // Simular delay de rede
-        setTimeout(() => {
-          const games = getMockGamesByFilters(filters);
-          resolve(games);
-        }, 500);
-      });
-    }
-
-    // Tentar buscar da API real (com fallback para dados mockados)
+    // Tentar buscar da API real primeiro
     try {
       const params = new URLSearchParams();
       
@@ -34,20 +22,30 @@ class GameService {
         params.append('sort-by', filters.sortBy);
       }
 
-      const url = `${this.baseUrl}/games?${params.toString()}`;
+      const url = `${this.baseUrl}?${params.toString()}`;
+      console.log('🌐 Buscando jogos da API local:', url);
       
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       const data = await response.json();
-      return data;
+      console.log('✅ Jogos carregados da API:', data.length, 'jogos');
+      
+      // Limitar a 3 jogos como solicitado
+      return data.slice(0, 3);
     } catch (error) {
       console.warn('⚠️ Erro ao buscar da API, usando dados mockados:', error);
       // Fallback para dados mockados em caso de erro
-      return getMockGamesByFilters(filters);
+      return getMockGamesByFilters(filters).slice(0, 3);
     }
   }
 

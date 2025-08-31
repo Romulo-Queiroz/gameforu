@@ -4,137 +4,99 @@
 
 import { Game } from '../services/types';
 
+// Dados mockados baseados em jogos reais da API do FreeToGame
 export const mockGames: Game[] = [
   {
-    id: 1,
-    title: "Counter-Strike 2",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6w2y.jpg",
-    short_description: "Counter-Strike 2 é a evolução do jogo de tiro tático mais jogado do mundo. Construído com a Source 2, apresenta mapas redesenhados, iluminação dinâmica e novos efeitos visuais.",
-    game_url: "https://store.steampowered.com/app/730/CounterStrike_2/",
-    genre: "FPS",
-    platform: "PC",
-    publisher: "Valve",
-    developer: "Valve",
-    release_date: "2023-09-27",
-    freetogame_profile_url: "https://www.freetogame.com/counter-strike-2"
+    id: 540,
+    title: "Overwatch 2",
+    thumbnail: "https://www.freetogame.com/g/540/thumbnail.jpg",
+    short_description: "A hero-focused first-person team shooter from Blizzard Entertainment.",
+    game_url: "https://www.freetogame.com/open/overwatch-2",
+    genre: "Shooter",
+    platform: "PC (Windows)",
+    publisher: "Activision Blizzard",
+    developer: "Blizzard Entertainment",
+    release_date: "2022-10-04",
+    freetogame_profile_url: "https://www.freetogame.com/overwatch-2"
   },
   {
-    id: 2,
+    id: 516,
+    title: "PUBG: BATTLEGROUNDS",
+    thumbnail: "https://www.freetogame.com/g/516/thumbnail.jpg",
+    short_description: "Get into the action in one of the longest running battle royale games PUBG Battlegrounds.",
+    game_url: "https://www.freetogame.com/open/pubg",
+    genre: "Shooter",
+    platform: "PC (Windows)",
+    publisher: "KRAFTON, Inc.",
+    developer: "KRAFTON, Inc.",
+    release_date: "2022-01-12",
+    freetogame_profile_url: "https://www.freetogame.com/pubg"
+  },
+  {
+    id: 508,
+    title: "Enlisted",
+    thumbnail: "https://www.freetogame.com/g/508/thumbnail.jpg",
+    short_description: "Get ready to command your own World War II military squad in Gaijin and Darkflow Software's MMO squad-based shooter Enlisted.",
+    game_url: "https://www.freetogame.com/open/enlisted",
+    genre: "Shooter",
+    platform: "PC (Windows)",
+    publisher: "Gaijin Entertainment",
+    developer: "Darkflow Software",
+    release_date: "2021-04-08",
+    freetogame_profile_url: "https://www.freetogame.com/enlisted"
+  },
+  {
+    id: 466,
     title: "Valorant",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rpf.jpg",
-    short_description: "Valorant é um jogo de tiro tático 5v5 baseado em personagens onde você combina precisão, estratégia e habilidades únicas para dominar o campo de batalha.",
-    game_url: "https://playvalorant.com/",
-    genre: "FPS",
-    platform: "PC",
+    thumbnail: "https://www.freetogame.com/g/466/thumbnail.jpg",
+    short_description: "Test your mettle in Riot Games' character-based FPS shooter Valorant.",
+    game_url: "https://www.freetogame.com/open/valorant",
+    genre: "Shooter",
+    platform: "PC (Windows)",
     publisher: "Riot Games",
     developer: "Riot Games",
     release_date: "2020-06-02",
     freetogame_profile_url: "https://www.freetogame.com/valorant"
   },
   {
-    id: 3,
-    title: "League of Legends",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg",
-    short_description: "League of Legends é um MOBA estratégico onde duas equipes de cinco campeões poderosos se enfrentam para destruir a base uma da outra.",
-    game_url: "https://www.leagueoflegends.com/",
-    genre: "MOBA",
-    platform: "PC",
-    publisher: "Riot Games",
-    developer: "Riot Games",
-    release_date: "2009-10-27",
-    freetogame_profile_url: "https://www.freetogame.com/league-of-legends"
+    id: 452,
+    title: "Call of Duty: Warzone",
+    thumbnail: "https://www.freetogame.com/g/452/thumbnail.jpg",
+    short_description: "A standalone free-to-play battle royale and modes accessible via Call of Duty: Modern Warfare.",
+    game_url: "https://www.freetogame.com/open/call-of-duty-warzone",
+    genre: "Shooter",
+    platform: "PC (Windows)",
+    publisher: "Activision",
+    developer: "Infinity Ward",
+    release_date: "2020-03-10",
+    freetogame_profile_url: "https://www.freetogame.com/call-of-duty-warzone"
   },
   {
-    id: 4,
+    id: 23,
     title: "Apex Legends",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r6l.jpg",
-    short_description: "Apex Legends é um battle royale gratuito onde lendas com habilidades únicas se unem para lutar pela fama e fortuna na Fronteira.",
-    game_url: "https://www.ea.com/games/apex-legends",
-    genre: "Battle Royale",
-    platform: "PC",
+    thumbnail: "https://www.freetogame.com/g/23/thumbnail.jpg",
+    short_description: "A free-to-play strategic battle royale game featuring 60-player matches and team-based play.",
+    game_url: "https://www.freetogame.com/open/apex-legends",
+    genre: "Shooter",
+    platform: "PC (Windows)",
     publisher: "Electronic Arts",
     developer: "Respawn Entertainment",
     release_date: "2019-02-04",
     freetogame_profile_url: "https://www.freetogame.com/apex-legends"
-  },
-  {
-    id: 5,
-    title: "Fortnite",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r6l.jpg",
-    short_description: "Fortnite é um jogo de sobrevivência onde você constrói, luta e sobrevive. Baixe gratuitamente e lute para ser o último sobrevivente.",
-    game_url: "https://www.epicgames.com/fortnite/",
-    genre: "Battle Royale",
-    platform: "PC",
-    publisher: "Epic Games",
-    developer: "Epic Games",
-    release_date: "2017-07-25",
-    freetogame_profile_url: "https://www.freetogame.com/fortnite"
-  },
-  {
-    id: 6,
-    title: "World of Warcraft",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg",
-    short_description: "World of Warcraft é um MMORPG épico onde você cria um herói e explora o mundo de Azeroth, completando missões e enfrentando desafios.",
-    game_url: "https://worldofwarcraft.blizzard.com/",
-    genre: "MMORPG",
-    platform: "PC",
-    publisher: "Blizzard Entertainment",
-    developer: "Blizzard Entertainment",
-    release_date: "2004-11-23",
-    freetogame_profile_url: "https://www.freetogame.com/world-of-warcraft"
-  },
-  {
-    id: 7,
-    title: "Dota 2",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg",
-    short_description: "Dota 2 é um MOBA estratégico onde duas equipes de cinco heróis se enfrentam para destruir a base inimiga e proteger a sua própria.",
-    game_url: "https://www.dota2.com/",
-    genre: "MOBA",
-    platform: "PC",
-    publisher: "Valve",
-    developer: "Valve",
-    release_date: "2013-07-09",
-    freetogame_profile_url: "https://www.freetogame.com/dota-2"
-  },
-  {
-    id: 8,
-    title: "Rocket League",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r6l.jpg",
-    short_description: "Rocket League é futebol, mas com carros! Combine futebol com corrida em partidas caóticas e divertidas.",
-    game_url: "https://www.rocketleague.com/",
-    genre: "Sports",
-    platform: "PC",
-    publisher: "Psyonix",
-    developer: "Psyonix",
-    release_date: "2015-07-07",
-    freetogame_profile_url: "https://www.freetogame.com/rocket-league"
-  },
-  {
-    id: 9,
-    title: "Genshin Impact",
-    thumbnail: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rpf.jpg",
-    short_description: "Genshin Impact é um RPG de ação de mundo aberto onde você explora o mundo de Teyvat e coleta personagens únicos.",
-    game_url: "https://genshin.hoyoverse.com/",
-    genre: "RPG",
-    platform: "PC",
-    publisher: "miHoYo",
-    developer: "miHoYo",
-    release_date: "2020-09-28",
-    freetogame_profile_url: "https://www.freetogame.com/genshin-impact"
   }
 ];
 
-// Configurações pré-definidas para busca popular
+// Configurações pré-definidas para busca popular baseadas na API do FreeToGame
 export const popularSearchConfigs = [
   {
-    name: "FPS Populares",
-    description: "Jogos de tiro em primeira pessoa mais jogados",
+    name: "Shooters Populares",
+    description: "Jogos de tiro mais populares",
     filters: {
       platform: "pc" as const,
       category: "shooter" as const,
       sortBy: "popularity" as const
     },
-    games: mockGames.filter(game => game.genre === "FPS")
+    games: mockGames.filter(game => game.genre === "Shooter")
   },
   {
     name: "Battle Royale",
@@ -147,24 +109,24 @@ export const popularSearchConfigs = [
     games: mockGames.filter(game => game.genre === "Battle Royale")
   },
   {
-    name: "MOBA Clássicos",
+    name: "MMORPG",
+    description: "Jogos de RPG online massivo",
+    filters: {
+      platform: "pc" as const,
+      category: "mmorpg" as const,
+      sortBy: "popularity" as const
+    },
+    games: mockGames.filter(game => game.genre === "MMORPG")
+  },
+  {
+    name: "Estratégia",
     description: "Jogos de estratégia em tempo real",
     filters: {
       platform: "pc" as const,
       category: "strategy" as const,
-      sortBy: "popularity" as const
-    },
-    games: mockGames.filter(game => game.genre === "MOBA")
-  },
-  {
-    name: "RPG Gratuitos",
-    description: "RPGs de mundo aberto para explorar",
-    filters: {
-      platform: "pc" as const,
-      category: "mmorpg" as const,
       sortBy: "release-date" as const
     },
-    games: mockGames.filter(game => game.genre === "RPG" || game.genre === "MMORPG")
+    games: mockGames.filter(game => game.genre === "Strategy")
   }
 ];
 
@@ -175,18 +137,21 @@ export const getMockGamesByFilters = (filters: any): Game[] => {
   // Filtrar por plataforma
   if (filters.platform) {
     filteredGames = filteredGames.filter(game => 
-      game.platform?.toLowerCase() === filters.platform.toLowerCase()
+      game.platform?.toLowerCase().includes(filters.platform.toLowerCase())
     );
   }
 
   // Filtrar por categoria/gênero
   if (filters.category) {
     const categoryMap: { [key: string]: string[] } = {
-      'shooter': ['FPS'],
+      'shooter': ['Shooter'],
       'battle-royale': ['Battle Royale'],
-      'strategy': ['MOBA'],
-      'mmorpg': ['MMORPG', 'RPG'],
-      'sports': ['Sports']
+      'strategy': ['Strategy'],
+      'mmorpg': ['MMORPG'],
+      'sports': ['Sports'],
+      'racing': ['Racing'],
+      'social': ['Social'],
+      'sandbox': ['Sandbox']
     };
 
     const genres = categoryMap[filters.category] || [filters.category];
