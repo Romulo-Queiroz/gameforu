@@ -15,11 +15,13 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-            🎮 GameForU
+            Bem vindo ao Games for U 
           </h1>
-          <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Descubra seu próximo jogo favorito em segundos
-          </p>
+          <div className="flex justify-center">
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed text-center">
+              Descubra seu próximo jogo favorito em segundos
+            </p>
+          </div>
           
           {/* CTA Principal */}
           <div className="mb-12">
